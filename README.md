@@ -1,6 +1,6 @@
 # ACE Labs
 
-**AI, Cloud & Engineering.** The source code for the [ACE Labs website](https://prasadf18.github.io/acelabs/).
+**AI, Cloud & Engineering.** The source code for the [ACE Labs website](https://acelabs-hq.github.io/acelabs/).
 
 ACE Labs is an independent technology and product innovation lab focused on building intelligent solutions, transforming businesses, and solving complex engineering challenges. This repository is the lab's public website: a small, fast, static site with no backend, no tracking and no client-side framework.
 
@@ -50,7 +50,7 @@ I chose Astro because the site is mostly content. It ships almost no JavaScript,
 You need **Node.js 22.12 or newer**.
 
 ```bash
-git clone https://github.com/prasadf18/acelabs.git
+git clone https://github.com/acelabs-hq/acelabs.git
 cd acelabs
 npm install
 npm run dev
@@ -177,7 +177,7 @@ If the metadata is missing or wrong (for example a category that does not exist)
 
 ### Base path
 
-The site is served from a sub-path on GitHub Pages: `https://prasadf18.github.io/acelabs/`. That is why internal links go through `url()` in `src/utils/url.ts` instead of being written as `/about/`. A plain `/about/` would point at the wrong place.
+The site is served from a sub-path on GitHub Pages: `https://acelabs-hq.github.io/acelabs/`. That is why internal links go through `url()` in `src/utils/url.ts` instead of being written as `/about/`. A plain `/about/` would point at the wrong place.
 
 If the site moves to its own domain, nothing in the code has to change. Set two environment variables when building:
 

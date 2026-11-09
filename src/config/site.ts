@@ -25,7 +25,7 @@ export const site = {
 
   /** Only links that exist. Add LinkedIn or X here once the accounts are real. */
   links: {
-    github: "https://github.com/prasadf18/acelabs",
+    github: "https://github.com/acelabs-hq/acelabs",
   },
 
   /** Main navigation. Order here is the order on screen. */
