@@ -10,7 +10,7 @@ export const site = {
 
   /** Plain statement of what this project is. Used on the About page and in the README. */
   independence:
-    "ACE Labs is an independent side project run by its founder outside of work. It is not connected to, funded by or endorsed by any employer, and nothing on this site speaks for one.",
+    "ACE Labs is an independent side project. It is not connected to, funded by or endorsed by any employer, and nothing on this site speaks for one.",
   description:
     "ACE Labs is an independent technology and product innovation lab focused on building intelligent solutions, transforming businesses, and solving complex engineering challenges.",
 
@@ -19,13 +19,6 @@ export const site = {
    * Confirm this is the inbox you actually read before sharing the site.
    */
   email: "ace@gmail.com",
-
-  founder: {
-    name: "Prasad Firame",
-    initials: "PF",
-    role: "Founder & Engineer",
-    bio: "3+ years of experience building software systems, AI-powered solutions, and scalable digital products.",
-  },
 
   /** Only links that exist. Add LinkedIn or X here once the accounts are real. */
   links: {

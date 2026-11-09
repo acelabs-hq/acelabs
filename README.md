@@ -30,7 +30,7 @@ ACE Labs is an independent technology and product innovation lab focused on buil
 
 ## About this project
 
-ACE Labs is an independent side project run by its founder, [Prasad Firame](https://github.com/prasadf18), outside of work. It is not connected to, funded by or endorsed by any employer, and nothing in this repository or on the site speaks for one. It is a place to build, learn and write about applied AI, cloud and software engineering.
+ACE Labs is an independent side project, founded by Prasad F. and built with a small group of collaborators. It is not connected to, funded by or endorsed by any employer, and nothing in this repository or on the site speaks for one. It is a place to build, learn and write about applied AI, cloud and software engineering.
 
 This repository, [`acelabs-hq/acelabs`](https://github.com/acelabs-hq/acelabs), is the single home for the website. Work happens on branches and is merged into the default branch, `dev`.
 
@@ -47,7 +47,7 @@ A multi-page site built with [Astro](https://astro.build) and plain TypeScript, 
 | Systems | `/systems/` | The kinds of systems the lab focuses on (QMS, ERP, SaaS, healthcare) |
 | Projects | `/projects/` | Project blueprints: reference designs, clearly labelled as ideas |
 | Notes | `/notes/` | Short articles on AI, cloud and engineering, written in Markdown |
-| About | `/about/` | What ACE means, principles, the founder and a FAQ |
+| About | `/about/` | What ACE means, independence, principles, the team and collaborators, and a FAQ |
 | Contact | `/contact/` | A real email link with a prefilled message |
 
 I chose Astro because the site is mostly content. It ships almost no JavaScript, builds to plain HTML, and lets pages share a layout and components instead of repeating the same header and footer in every file.
@@ -98,7 +98,7 @@ acelabs/
 │   │   ├── NetworkCanvas.astro   Animated background for the home page hero
 │   │   └── PageHead.astro        Title block at the top of inner pages
 │   ├── config/
-│   │   └── site.ts             Name, email, founder, links and navigation
+│   │   └── site.ts             Name, email, links and navigation
 │   ├── content/
 │   │   └── notes/              One Markdown file per note
 │   ├── content.config.ts       The shape every note must follow
@@ -106,7 +106,8 @@ acelabs/
 │   │   ├── blueprints.ts         Project blueprints, grouped by industry
 │   │   ├── faq.ts                Questions and answers
 │   │   ├── services.ts           Services and engagement steps
-│   │   └── systems.ts            Systems the lab focuses on
+│   │   ├── systems.ts            Systems the lab focuses on
+│   │   └── team.ts               Leadership, collaborators and how collaboration works
 │   ├── layouts/
 │   │   └── BaseLayout.astro    Head tags, header, footer and page frame
 │   ├── pages/                  One file per URL
@@ -146,7 +147,8 @@ The idea behind the layout is simple: **content lives in `data/`, `content/` and
 
 | I want to... | Edit this |
 | --- | --- |
-| Change the contact email, founder bio or navigation | `src/config/site.ts` |
+| Change the contact email or navigation | `src/config/site.ts` |
+| Add or edit a person, collaborator or specialty | `src/data/team.ts` |
 | Add or reword a service | `src/data/services.ts` |
 | Add a system area | `src/data/systems.ts` |
 | Add a project blueprint | `src/data/blueprints.ts` |
@@ -265,7 +267,7 @@ An earlier version of the site was written from a template and included claims t
 - A description of what the lab does and the areas it works in.
 - **Project blueprints**, which are labelled as reference designs and ideas, not delivered client work.
 - General engineering notes.
-- The founder's real name and background.
+- The team and collaborators, listed as the lab itself wrote them.
 - A plain statement that this is an independent side project.
 
 If you add something to the site, it should be something you can stand behind. Do not add client names, results, numbers or testimonials unless they are real and you have permission to publish them.
@@ -306,4 +308,4 @@ No license has been chosen yet, so all rights are reserved by default. If you wa
 
 ---
 
-Built by [Prasad Firame](https://github.com/prasadf18).
+Built by Prasad F. and collaborators.

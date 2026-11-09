@@ -58,3 +58,7 @@ section.flush {
 .mt {
   margin-top: 22px;
 }
+
+.grid.single {
+  grid-template-columns: 1fr;
+}
