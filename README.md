@@ -4,12 +4,13 @@
 
 ACE Labs is an independent technology and product innovation lab focused on building intelligent solutions, transforming businesses, and solving complex engineering challenges. This repository is the lab's public website: a small, fast, static site with no backend, no tracking and no client-side framework.
 
-> **Status:** early. The site is live, the structure is stable, and the content is deliberately modest. See [Content policy](#content-policy) for why.
+> **Status:** early. The structure is stable and the content is deliberately modest. See [Content policy](#content-policy) for why.
 
 ---
 
 ## Contents
 
+- [About this project](#about-this-project)
 - [What is in here](#what-is-in-here)
 - [Quick start](#quick-start)
 - [Project structure](#project-structure)
@@ -24,6 +25,14 @@ ACE Labs is an independent technology and product innovation lab focused on buil
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
+
+---
+
+## About this project
+
+ACE Labs is an independent side project run by its founder, [Prasad Firame](https://github.com/prasadf18), outside of work. It is not connected to, funded by or endorsed by any employer, and nothing in this repository or on the site speaks for one. It is a place to build, learn and write about applied AI, cloud and software engineering.
+
+This repository, [`acelabs-hq/acelabs`](https://github.com/acelabs-hq/acelabs), is the single home for the website. Work happens on branches and is merged into the default branch, `dev`.
 
 ---
 
@@ -195,13 +204,13 @@ The address is set once, in `src/config/site.ts`, and used by the footer and the
 
 ## Deployment
 
-The site is published to GitHub Pages by the workflow in `.github/workflows/deploy.yml`. On every push to `main` it installs dependencies, builds the site and deploys the `dist/` folder.
+The site is published to GitHub Pages by the workflow in `.github/workflows/deploy.yml`. On every push to `main` or `dev` (the repository's default branch is `dev`) it installs dependencies, builds the site and deploys the `dist/` folder.
 
 One-time setup in the GitHub repository:
 
 1. Go to **Settings → Pages**.
 2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
-3. Push to `main` and watch the run in the **Actions** tab.
+3. Push to `dev` (or `main`) and watch the run in the **Actions** tab.
 
 The workflow gives the deploy job a `github-pages` environment, which GitHub requires. Without it the deployment fails with a "Missing environment" error.
 
@@ -257,6 +266,7 @@ An earlier version of the site was written from a template and included claims t
 - **Project blueprints**, which are labelled as reference designs and ideas, not delivered client work.
 - General engineering notes.
 - The founder's real name and background.
+- A plain statement that this is an independent side project.
 
 If you add something to the site, it should be something you can stand behind. Do not add client names, results, numbers or testimonials unless they are real and you have permission to publish them.
 

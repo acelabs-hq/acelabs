@@ -7,6 +7,10 @@ export const site = {
   /** ACE stands for AI, Cloud and Engineering. */
   expansion: "AI, Cloud & Engineering",
   tagline: "An independent technology and product innovation lab.",
+
+  /** Plain statement of what this project is. Used on the About page and in the README. */
+  independence:
+    "ACE Labs is an independent side project run by its founder outside of work. It is not connected to, funded by or endorsed by any employer, and nothing on this site speaks for one.",
   description:
     "ACE Labs is an independent technology and product innovation lab focused on building intelligent solutions, transforming businesses, and solving complex engineering challenges.",
 

@@ -13,7 +13,7 @@ export const faqs: Faq[] = [
   {
     question: "What is ACE Labs?",
     answer:
-      "An independent technology and product innovation lab, founded by Prasad Firame. It focuses on building intelligent solutions and solving hard engineering problems.",
+      "An independent technology and product innovation lab, founded by Prasad Firame as a side project. It focuses on building intelligent solutions and solving hard engineering problems.",
   },
   {
     question: "What kinds of systems does it work on?",
@@ -26,9 +26,9 @@ export const faqs: Faq[] = [
       "No. The Projects page shows blueprints: reference designs for the kinds of systems the lab works on. They are ideas, not delivered projects.",
   },
   {
-    question: "Who is this for?",
+    question: "Is ACE Labs connected to an employer?",
     answer:
-      "Startups and established teams that want to modernize a system, automate a workflow or put AI into production.",
+      "No. ACE Labs is an independent side project run by its founder outside of work. It is not connected to, funded by or endorsed by any employer, and nothing here speaks for one.",
   },
   {
     question: "How would an engagement work?",
