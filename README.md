@@ -44,8 +44,6 @@ A multi-page site built with [Astro](https://astro.build) and plain TypeScript, 
 | --- | --- | --- |
 | Home | `/` | What the lab does, how it works, latest notes |
 | Services | `/services/` | Four areas of work and how an engagement is structured |
-| Systems | `/systems/` | The kinds of systems the lab focuses on (QMS, ERP, SaaS, healthcare) |
-| Projects | `/projects/` | Project blueprints: reference designs, clearly labelled as ideas |
 | Notes | `/notes/` | Short articles on AI, cloud and engineering, written in Markdown |
 | About | `/about/` | What ACE means, independence, principles, the team and collaborators, and a FAQ |
 | Contact | `/contact/` | A real email link with a prefilled message |
@@ -103,10 +101,8 @@ acelabs/
 │   │   └── notes/              One Markdown file per note
 │   ├── content.config.ts       The shape every note must follow
 │   ├── data/                   Page content kept out of the markup
-│   │   ├── blueprints.ts         Project blueprints, grouped by industry
 │   │   ├── faq.ts                Questions and answers
 │   │   ├── services.ts           Services and engagement steps
-│   │   ├── systems.ts            Systems the lab focuses on
 │   │   └── team.ts               Leadership, collaborators and how collaboration works
 │   ├── layouts/
 │   │   └── BaseLayout.astro    Head tags, header, footer and page frame
@@ -114,9 +110,7 @@ acelabs/
 │   │   ├── index.astro
 │   │   ├── about.astro
 │   │   ├── contact.astro
-│   │   ├── projects.astro
 │   │   ├── services.astro
-│   │   ├── systems.astro
 │   │   ├── 404.astro
 │   │   └── notes/
 │   │       ├── index.astro       The list of notes
@@ -150,15 +144,13 @@ The idea behind the layout is simple: **content lives in `data/`, `content/` and
 | Change the contact email or navigation | `src/config/site.ts` |
 | Add or edit a person, collaborator or specialty | `src/data/team.ts` |
 | Add or reword a service | `src/data/services.ts` |
-| Add a system area | `src/data/systems.ts` |
-| Add a project blueprint | `src/data/blueprints.ts` |
 | Add a FAQ entry | `src/data/faq.ts` |
 | Write a new note | A new file in `src/content/notes/` |
 | Change colours or fonts | `src/styles/tokens.css` |
 | Change a page's layout | The matching file in `src/pages/` |
 | Add a page | A new `.astro` file in `src/pages/`, plus a link in `site.ts` |
 
-Because the services, systems, blueprints and FAQ are data, adding an entry to one of those lists is enough. The home page, the inner page and the cards all update on their own.
+Because the services and FAQ are data, adding an entry to one of those lists is enough. The home page, the inner page and the cards all update on their own.
 
 ---
 
@@ -225,8 +217,6 @@ This site replaced a hand-written HTML version. Page addresses changed:
 | `index.html` | `/` |
 | `about.html` | `/about/` |
 | `services.html` | `/services/` |
-| `systems.html` | `/systems/` |
-| `work.html` | `/projects/` |
 | `contact.html` | `/contact/` |
 | `blog/` | `/notes/` |
 
@@ -265,7 +255,6 @@ This site only says things that are true.
 An earlier version of the site was written from a template and included claims that could not be backed up: statistics, client logos, a network of specialists and a terminal animation with made-up results. Those were removed. What remains is:
 
 - A description of what the lab does and the areas it works in.
-- **Project blueprints**, which are labelled as reference designs and ideas, not delivered client work.
 - General engineering notes.
 - The team and collaborators, listed as the lab itself wrote them.
 - A plain statement that this is an independent side project.
@@ -287,7 +276,6 @@ If a form is added later, the likely route is a hosted form service. It would ne
 Roughly in the order I would do them:
 
 - [ ] Confirm the public contact address.
-- [ ] Add real work to **Projects** as it ships, and keep blueprints clearly separate from it.
 - [ ] Publish more notes. Three is a start, not a blog.
 - [ ] Add a sitemap and an Open Graph image.
 - [ ] Run Lighthouse and axe and fix whatever they find.

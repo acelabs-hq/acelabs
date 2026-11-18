@@ -21,11 +21,6 @@ export const faqs: Faq[] = [
       "QMS, ERP, SaaS and healthcare systems, plus the AI, cloud and data work around them.",
   },
   {
-    question: "Are the projects on this site past client work?",
-    answer:
-      "No. The Projects page shows blueprints: reference designs for the kinds of systems the lab works on. They are ideas, not delivered projects.",
-  },
-  {
     question: "Is ACE Labs connected to an employer?",
     answer:
       "No. ACE Labs is an independent side project. It is not connected to, funded by or endorsed by any employer, and nothing here speaks for one.",

@@ -38,8 +38,6 @@ export const site = {
     { label: "Open source", href: "open-source/" },
     { label: "Research", href: "research/" },
     { label: "Services", href: "services/" },
-    { label: "Systems", href: "systems/" },
-    { label: "Projects", href: "projects/" },
     { label: "Podcast", href: "podcast/" },
     { label: "Notes", href: "notes/" },
     { label: "About", href: "about/" },
