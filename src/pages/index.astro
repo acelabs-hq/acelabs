@@ -20,7 +20,7 @@ const notes = (await getCollection("notes", ({ data }) => !data.draft))
     <NetworkCanvas />
     <div class="wrap hero-inner">
       <div>
-        <span class="tag">Independent technology & product lab</span>
+        <span class="tag">Independent AI research & product lab</span>
         <h1>We build and modernize <em>the systems work runs on.</em></h1>
         <p class="lead">
           {site.name} is an independent side project exploring applied AI, cloud and software
@@ -154,6 +154,62 @@ const notes = (await getCollection("notes", ({ data }) => !data.draft))
         }
       </div>
       <p class="mt"><a href={url("projects/")}>See project blueprints →</a></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap two">
+      <div>
+        <span class="tag">A practice led by Prasad F.</span>
+        <h2>The lab, and the work behind it.</h2>
+        <p class="lead">
+          ACE Labs is a practice, not just a company page. Alongside the research and the products,
+          Prasad shares his day-to-day routine as content: what he is building, learning and
+          testing, including what does not work.
+        </p>
+      </div>
+      <div>
+        <span class="tag">Research & podcast</span>
+        <ul class="list">
+          <li><b>Research.</b> Applied AI, system sustainability and builder culture, explored in the open. <a href={url("research/")}>See the research →</a></li>
+          <li><b>Podcast.</b> An indie hacking podcast, in the works. <a href={url("podcast/")}>About the podcast →</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap two">
+      <div>
+        <span class="tag">Open source</span>
+        <h2>Built in the open.</h2>
+        <p class="lead">
+          The lab works in the open where it can. This site and its code are public on GitHub, and
+          open source work will be listed here as it happens.
+        </p>
+      </div>
+      <div>
+        <p class="actions">
+          <a class="btn ghost" href={site.links.github} rel="noopener">See the code on GitHub</a>
+        </p>
+        <p class="note-banner no-top">
+          The lab holds no certifications, memberships or partner status yet, and this site does
+          not claim any.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="tag">Follow along</span>
+      <h2>Join the conversation.</h2>
+      <p class="lead">Follow the lab on Instagram, X and Discord as they go live.</p>
+      <p class="actions">
+        <a class="btn" href={site.links.instagram} rel="noopener">Instagram @ace_labs_in</a>
+        {site.links.x && <a class="btn ghost" href={site.links.x} rel="noopener">X</a>}
+        {site.links.discord && <a class="btn ghost" href={site.links.discord} rel="noopener">Discord</a>}
+      </p>
     </div>
   </section>
 

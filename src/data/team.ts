@@ -20,7 +20,7 @@ export const leadership: Person[] = [
     name: "Mahesh F.",
     initials: "MF",
     role: "Head of Business Development",
-    bio: "Builds client relationships and brings new projects to ACE Labs through a wide professional network.",
+    bio: "Helps grow the lab's network of builders, guests and collaborators.",
   },
 ];
 
@@ -35,7 +35,7 @@ export const collaborators: Person[] = [
     name: "Kshitij G.",
     initials: "KG",
     role: "Senior Software Engineer",
-    bio: "Senior software engineer with 6 years of experience working across the stack, from backend services to polished user interfaces, in large enterprise and consulting environments.",
+    bio: "Senior software engineer with 6 years of experience working across the stack, from backend services to polished user interfaces.",
   },
 ];
 

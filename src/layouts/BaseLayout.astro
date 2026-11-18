@@ -43,5 +43,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       <slot />
     </main>
     <Footer />
+    <script>
+      import { initReveal } from "../scripts/reveal";
+      initReveal();
+    </script>
   </body>
 </html>
