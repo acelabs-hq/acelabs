@@ -37,6 +37,12 @@ export const collaborators: Person[] = [
     role: "Senior Software Engineer",
     bio: "Senior software engineer with 6 years of experience working across the stack, from backend services to polished user interfaces.",
   },
+  {
+    name: "Pixel",
+    initials: "P",
+    role: "Backend Engineer",
+    bio: "Backend engineer at a quantum computing startup, with 2+ years of experience.",
+  },
 ];
 
 /** Areas the lab and its collaborators cover together. */
