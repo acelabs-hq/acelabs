@@ -17,8 +17,8 @@ export const leadership: Person[] = [
     bio: "3+ years of experience building software systems, AI-powered solutions, and scalable digital products.",
   },
   {
-    name: "Mahesh F.",
-    initials: "MF",
+    name: "MK",
+    initials: "MK",
     role: "Head of Business Development",
     bio: "Helps grow the lab's network of builders, guests and collaborators.",
   },
