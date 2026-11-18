@@ -62,3 +62,41 @@ section.flush {
 .grid.single {
   grid-template-columns: 1fr;
 }
+
+/* Definition list used on the About page. */
+.details {
+  margin: 18px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.details > div {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.details dt {
+  font: 500 12px var(--font-mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-top: 3px;
+}
+
+.details dd {
+  margin: 0;
+}
+
+.about-copy p {
+  font-size: 18px;
+  max-width: 680px;
+}
+
+@media (max-width: 560px) {
+  .details > div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}

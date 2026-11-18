@@ -30,29 +30,43 @@ const principles = [
 >
   <PageHead
     tag="About"
-    title="An independent lab, run like an engineering practice."
+    title="We build and modernize the systems work runs on."
     lead={site.description}
   />
 
   <section>
-    <div class="wrap two">
-      <div>
-        <span class="tag">What ACE means</span>
-        <h2>AI, Cloud & Engineering.</h2>
-        <p>
-          Those are the three disciplines the lab brings together. Most real problems need all
-          three: data and models that work, infrastructure that stays up, and software that people
-          can maintain.
-        </p>
-      </div>
-      <div>
-        <span class="tag">How it works</span>
-        <h2>Built for handover.</h2>
-        <p>
-          For anything the lab builds, the aim is a system that other people can read, run and own,
-          with documentation and tests that make that possible.
-        </p>
-      </div>
+    <div class="wrap about-copy">
+      <span class="tag">What we do</span>
+      <h2>AI, Cloud & Engineering, together.</h2>
+      <p>
+        Most real problems need all three disciplines: data and models that work, infrastructure
+        that stays up, and software that people can maintain. ACE Labs brings them together on one
+        system instead of treating them as separate projects.
+      </p>
+      <p>
+        We work on QMS, ERP, SaaS and healthcare systems, plus the AI, cloud and data work around
+        them. For anything the lab builds, the aim is a system that other people can read, run and
+        own, with the documentation and tests that make that possible.
+      </p>
+      <p>
+        The lab is also built in the open. Open source and community are at its core, and the work
+        is shared as <a href={url("open-source/")}>code</a> and <a href={url("notes/")}>notes</a>.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="tag">The details</span>
+      <h2>At a glance.</h2>
+      <dl class="details">
+        <div><dt>Name</dt><dd>{site.name}</dd></div>
+        <div><dt>Stands for</dt><dd>{site.expansion}</dd></div>
+        <div><dt>Led by</dt><dd>Prasad F., Founder &amp; Engineer</dd></div>
+        <div><dt>Status</dt><dd>Independent side project</dd></div>
+        <div><dt>Open source</dt><dd><a href={site.links.github} rel="noopener">github.com/acelabs-hq/acelabs</a></dd></div>
+        <div><dt>Contact</dt><dd><a href={`mailto:${site.email}`}>{site.email}</a></dd></div>
+      </dl>
     </div>
   </section>
 
@@ -101,7 +115,7 @@ const principles = [
 
   <section id="collaborators">
     <div class="wrap">
-      <span class="tag">Collaborators</span>
+      <span class="tag">The bench</span>
       <h2>When we need more firepower, we collaborate.</h2>
       <p class="lead">
         Some problems need more hands or deeper specialties. The lab brings in trusted engineers and
