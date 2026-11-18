@@ -1,0 +1,194 @@
+---
+/**
+ * A small 3D robot built from CSS 3D transforms (no libraries). It floats, blinks,
+ * and turns its head toward the pointer. Decorative only, so it is hidden from screen readers.
+ */
+---
+
+<div class="robot-stage" aria-hidden="true">
+  <div class="robot" data-robot>
+    <div class="antenna"><span></span></div>
+    <div class="head">
+      <div class="face front">
+        <span class="eye"></span>
+        <span class="eye"></span>
+        <span class="mouth"></span>
+      </div>
+      <div class="face back"></div>
+      <div class="face left"></div>
+      <div class="face right"></div>
+      <div class="face top"></div>
+      <div class="face bottom"></div>
+    </div>
+    <div class="body">
+      <div class="face front"><span class="core"></span></div>
+      <div class="face back"></div>
+      <div class="face left"></div>
+      <div class="face right"></div>
+      <div class="face top"></div>
+      <div class="face bottom"></div>
+    </div>
+  </div>
+  <div class="robot-shadow"></div>
+</div>
+
+<style>
+  .robot-stage {
+    --head: 112px;
+    --body: 84px;
+    perspective: 700px;
+    height: 250px;
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+
+  .robot {
+    position: relative;
+    width: var(--head);
+    height: 210px;
+    transform-style: preserve-3d;
+    transform: rotateX(var(--rx, -6deg)) rotateY(var(--ry, 24deg));
+    transition: transform 0.15s ease-out;
+  }
+
+  .head,
+  .body {
+    position: absolute;
+    left: 50%;
+    transform-style: preserve-3d;
+  }
+
+  .head {
+    --s: var(--head);
+    width: var(--s);
+    height: var(--s);
+    margin-left: calc(var(--s) / -2);
+    top: 24px;
+  }
+
+  .body {
+    --s: var(--body);
+    width: var(--s);
+    height: var(--s);
+    margin-left: calc(var(--s) / -2);
+    top: 128px;
+  }
+
+  .face {
+    position: absolute;
+    inset: 0;
+    background: var(--card);
+    border: 2px solid var(--fg);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .front { transform: translateZ(calc(var(--s) / 2)); }
+  .back { transform: rotateY(180deg) translateZ(calc(var(--s) / 2)); background: var(--line); }
+  .left { transform: rotateY(-90deg) translateZ(calc(var(--s) / 2)); background: var(--line); }
+  .right { transform: rotateY(90deg) translateZ(calc(var(--s) / 2)); background: var(--line); }
+  .top { transform: rotateX(90deg) translateZ(calc(var(--s) / 2)); background: var(--bg); }
+  .bottom { transform: rotateX(-90deg) translateZ(calc(var(--s) / 2)); background: var(--line); }
+
+  .eye {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 10px var(--accent);
+  }
+
+  .mouth {
+    flex-basis: 100%;
+    height: 4px;
+    width: 34px;
+    margin: 0 auto;
+    border-radius: 4px;
+    background: var(--fg);
+    flex-basis: auto;
+  }
+
+  .core {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 12px var(--accent);
+  }
+
+  .antenna {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 3px;
+    height: 26px;
+    margin-left: -1.5px;
+    background: var(--fg);
+    transform: translateZ(0);
+  }
+
+  .antenna span {
+    position: absolute;
+    left: 50%;
+    top: -9px;
+    width: 12px;
+    height: 12px;
+    margin-left: -6px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  .robot-shadow {
+    position: absolute;
+    bottom: 6px;
+    width: 90px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--fg);
+    opacity: 0.12;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .robot-stage .robot {
+      animation: robot-float 4s ease-in-out infinite;
+    }
+
+    .eye {
+      animation: robot-blink 5s infinite;
+    }
+
+    .antenna span {
+      animation: robot-ping 1.6s ease-in-out infinite;
+    }
+
+    .core {
+      animation: robot-ping 2.4s ease-in-out infinite;
+    }
+
+    @keyframes robot-float {
+      0%, 100% { translate: 0 0; }
+      50% { translate: 0 -10px; }
+    }
+
+    @keyframes robot-blink {
+      0%, 94%, 100% { transform: scaleY(1); }
+      97% { transform: scaleY(0.1); }
+    }
+
+    @keyframes robot-ping {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+  }
+</style>
+
+<script>
+  import { initRobot } from "../scripts/robot";
+  initRobot();
+</script>
