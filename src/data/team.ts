@@ -11,7 +11,7 @@ export interface Person {
 
 export const leadership: Person[] = [
   {
-    name: "Prasad F.",
+    name: "Prasad aka Ace",
     initials: "PF",
     role: "CEO & Co-Founder",
     bio: "3+ years of experience building software systems, AI-powered solutions, and scalable digital products.",
@@ -32,7 +32,7 @@ export const collaborators: Person[] = [
     bio: "Seasoned developer from India with 9+ years in web development, tooling, automation and parsers. Open-source contributor who values simplicity: doing more with less, without lowering the quality bar.",
   },
   {
-    name: "Kshitij G.",
+    name: "KG",
     initials: "KG",
     role: "Senior Software Engineer",
     bio: "Senior software engineer with 6 years of experience working across the stack, from backend services to polished user interfaces.",
