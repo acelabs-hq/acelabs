@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHead from "../components/PageHead.astro";
+import Cta from "../components/Cta.astro";
+import { site } from "../config/site";
+
+const pillars = [
+  {
+    title: "Open by default",
+    text: "The lab's core work is built in the open, so anyone can read it, run it and question it.",
+  },
+  {
+    title: "Community first",
+    text: "Ideas, issues and fixes from the community shape what gets built next.",
+  },
+  {
+    title: "Documented to be reused",
+    text: "Code ships with the notes and tests that let other people pick it up and own it.",
+  },
+];
+
+const ways = [
+  { title: "Read the code", text: "Browse the repository, including this website.", href: site.links.github, label: "GitHub" },
+  { title: "Open an issue", text: "Report a bug, ask a question or suggest an idea.", href: `${site.links.github}/issues`, label: "Issues" },
+  { title: "Send a pull request", text: "Fix something or improve the docs and open a pull request.", href: `${site.links.github}/pulls`, label: "Pull requests" },
+];
+---
+
+<BaseLayout
+  title="Open source"
+  description="Open source and community are at the core of ACE Labs. Read the code, open an issue or contribute."
+>
+  <PageHead
+    tag="Open source"
+    title="Open source and community are our core."
+    lead="ACE Labs builds in public. The work, the notes and the conversations are open to anyone who wants to learn from them or help."
+  />
+
+  <section>
+    <div class="wrap">
+      <div class="grid">
+        {
+          pillars.map((pillar) => (
+            <div class="card">
+              <h3>{pillar.title}</h3>
+              <p>{pillar.text}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="tag">Get involved</span>
+      <h2>Three ways to take part.</h2>
+      <div class="grid">
+        {
+          ways.map((way) => (
+            <a class="card" href={way.href} rel="noopener">
+              <h3>{way.title}</h3>
+              <p>{way.text}</p>
+              <p class="tag">{way.label} →</p>
+            </a>
+          ))
+        }
+      </div>
+      <p class="note-banner">
+        A Discord community is planned. Its invite will appear in the footer once the server is
+        live.
+      </p>
+    </div>
+  </section>
+
+  <Cta title="Have an idea for the lab?" text="Tell us what you would like to see built in the open." />
+</BaseLayout>

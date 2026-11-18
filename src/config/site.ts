@@ -28,10 +28,14 @@ export const site = {
     discord: "",
     /** Add the profile link for X once confirmed. Empty means it is not shown. */
     x: "",
+    /** Add the LinkedIn page and YouTube channel links once they exist. */
+    linkedin: "",
+    youtube: "",
   },
 
   /** Main navigation. Order here is the order on screen. */
   nav: [
+    { label: "Open source", href: "open-source/" },
     { label: "Research", href: "research/" },
     { label: "Services", href: "services/" },
     { label: "Systems", href: "systems/" },
