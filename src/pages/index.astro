@@ -4,6 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import NetworkCanvas from "../components/NetworkCanvas.astro";
 import FaqList from "../components/FaqList.astro";
 import Cta from "../components/Cta.astro";
+import RobotScene from "../components/RobotScene.astro";
 import { services, engagement } from "../data/services";
 import { industries } from "../data/blueprints";
 import { faqs } from "../data/faq";
@@ -31,10 +32,13 @@ const notes = (await getCollection("notes", ({ data }) => !data.draft))
           <a class="btn ghost" href={url("projects/")}>See project blueprints</a>
         </div>
       </div>
-      <div class="pillars">
+      <div>
+        <RobotScene />
+        <div class="pillars">
         <div><b>A: AI</b>Applied AI that solves a real problem and is tested against real failures.</div>
         <div><b>C: Cloud</b>Reliable, secure, cost-aware infrastructure that scales and recovers.</div>
         <div><b>E: Engineering</b>Clean software and automation that a team can own.</div>
+        </div>
       </div>
     </div>
   </section>
@@ -208,7 +212,13 @@ const notes = (await getCollection("notes", ({ data }) => !data.draft))
       <p class="actions">
         <a class="btn" href={site.links.instagram} rel="noopener">Instagram @ace_labs_in</a>
         {site.links.x && <a class="btn ghost" href={site.links.x} rel="noopener">X</a>}
-        {site.links.discord && <a class="btn ghost" href={site.links.discord} rel="noopener">Discord</a>}
+        {
+          site.links.discord ? (
+            <a class="btn ghost" href={site.links.discord} rel="noopener">Discord</a>
+          ) : (
+            <span class="btn ghost" aria-disabled="true">Discord: coming soon</span>
+          )
+        }
       </p>
     </div>
   </section>
