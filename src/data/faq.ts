@@ -46,6 +46,21 @@ export const faqs: Faq[] = [
       "You do. Code, infrastructure and decisions stay with your team. That is the intent of every engagement.",
   },
   {
+    question: "Is ACE Labs a practice led by one person?",
+    answer:
+      "Yes. ACE Labs is a practice led by Prasad F., with collaborators. Alongside the lab's research and products, he shares his day-to-day routine as content and is starting an indie hacking podcast.",
+  },
+  {
+    question: "Are there products or episodes yet?",
+    answer:
+      "Not yet. The podcast and the lab's own products are in the works. This site only describes what is real.",
+  },
+  {
+    question: "Where can I follow along?",
+    answer:
+      "On Instagram at @ace_labs_in, and on X and Discord as those go live. Links are in the footer.",
+  },
+  {
     question: "How do I get in touch?",
     answer:
       "By email. The address is on the contact page. Say what you are trying to fix and include any links that help.",

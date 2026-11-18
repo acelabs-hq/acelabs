@@ -23,13 +23,20 @@ export const site = {
   /** Only links that exist. Add LinkedIn or X here once the accounts are real. */
   links: {
     github: "https://github.com/acelabs-hq/acelabs",
+    instagram: "https://www.instagram.com/ace_labs_in/",
+    /** Add the invite link once the Discord server exists. Empty means it is not shown. */
+    discord: "",
+    /** Add the profile link for X once confirmed. Empty means it is not shown. */
+    x: "",
   },
 
   /** Main navigation. Order here is the order on screen. */
   nav: [
+    { label: "Research", href: "research/" },
     { label: "Services", href: "services/" },
     { label: "Systems", href: "systems/" },
     { label: "Projects", href: "projects/" },
+    { label: "Podcast", href: "podcast/" },
     { label: "Notes", href: "notes/" },
     { label: "About", href: "about/" },
   ],

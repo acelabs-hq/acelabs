@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHead from "../components/PageHead.astro";
+import Cta from "../components/Cta.astro";
+import { research, method } from "../data/focus";
+import { url } from "../utils/url";
+---
+
+<BaseLayout
+  title="Research"
+  description="ACE Labs research on applied AI, system sustainability and the culture around building."
+>
+  <PageHead
+    tag="Research"
+    title="Research that leads to things people can use."
+    lead="The lab does independent AI research, in public and on its own time. The aim is to understand what works, write it down honestly, and turn the useful parts into products."
+  />
+
+  <section>
+    <div class="wrap">
+      <div class="grid">
+        {
+          research.map((area, index) => (
+            <div class="card" id={area.id}>
+              <span class="tag">{String(index + 1).padStart(2, "0")}</span>
+              <h3>{area.title}</h3>
+              <p>{area.summary}</p>
+              <ul>
+                {area.items.map((item) => <li>{item}</li>)}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+      <p class="note-banner">
+        These are the questions the lab is exploring. Findings are shared as <a href={url("notes/")}>notes</a> as they are written.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="tag">How the research works</span>
+      <h2>Small questions, shared openly.</h2>
+      <div class="grid">
+        {
+          method.map((step) => (
+            <div class="card">
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <Cta title="Know a problem worth researching?" text="Share a pain you or your team deal with, or a question you would like us to dig into." />
+</BaseLayout>

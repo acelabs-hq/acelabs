@@ -1,17 +1,68 @@
 ---
 import { site } from "../config/site";
+import { url } from "../utils/url";
 
 const year = new Date().getFullYear();
+
+/** Only accounts that have a link are shown. Fill the empty ones in src/config/site.ts. */
+const socials = [
+  { label: "Instagram", href: site.links.instagram },
+  { label: "X", href: site.links.x },
+  { label: "Discord", href: site.links.discord },
+  { label: "GitHub", href: site.links.github },
+].filter((item) => item.href);
+
+const columns = [
+  {
+    title: "Lab",
+    links: [
+      { label: "Research", href: "research/" },
+      { label: "Podcast", href: "podcast/" },
+      { label: "Notes", href: "notes/" },
+    ],
+  },
+  {
+    title: "Work",
+    links: [
+      { label: "Services", href: "services/" },
+      { label: "Systems", href: "systems/" },
+      { label: "Projects", href: "projects/" },
+    ],
+  },
+  {
+    title: "ACE Labs",
+    links: [
+      { label: "About", href: "about/" },
+      { label: "Contact", href: "contact/" },
+    ],
+  },
+];
 ---
 
 <footer class="site-footer">
   <div class="wrap">
-    <span>
-      © {year} {site.name}, {site.expansion} · An independent side project ·
-      <a href={`mailto:${site.email}`}>{site.email}</a>
-    </span>
-    <span>
-      <a href={site.links.github} rel="noopener">GitHub</a>
-    </span>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <b>{site.name}</b>
+        <p>{site.tagline}</p>
+        <p class="footer-social">
+          {socials.map((item) => <a href={item.href} rel="noopener">{item.label}</a>)}
+        </p>
+      </div>
+      {
+        columns.map((column) => (
+          <div class="footer-col">
+            <b>{column.title}</b>
+            {column.links.map((link) => <a href={url(link.href)}>{link.label}</a>)}
+          </div>
+        ))
+      }
+    </div>
+    <div class="footer-bottom">
+      <span>
+        © {year} {site.name}, {site.expansion} · An independent side project ·
+        <a href={`mailto:${site.email}`}>{site.email}</a>
+      </span>
+    </div>
   </div>
 </footer>
