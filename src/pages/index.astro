@@ -212,13 +212,7 @@ const notes = (await getCollection("notes", ({ data }) => !data.draft))
       <p class="actions">
         <a class="btn" href={site.links.instagram} rel="noopener">Instagram @ace_labs_in</a>
         {site.links.x && <a class="btn ghost" href={site.links.x} rel="noopener">X</a>}
-        {
-          site.links.discord ? (
-            <a class="btn ghost" href={site.links.discord} rel="noopener">Discord</a>
-          ) : (
-            <span class="btn ghost" aria-disabled="true">Discord: coming soon</span>
-          )
-        }
+        {site.links.discord && <a class="btn ghost" href={site.links.discord} rel="noopener">Discord</a>}
       </p>
     </div>
   </section>

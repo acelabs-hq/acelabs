@@ -38,7 +38,7 @@ export function startNetwork(canvas: HTMLCanvasElement): void {
       if (a.x < 0 || a.x > canvas.width) a.vx *= -1;
       if (a.y < 0 || a.y > canvas.height) a.vy *= -1;
 
-      ctx!.fillStyle = "#ff8a57";
+      ctx!.fillStyle = "#ef4444";
       ctx!.fillRect(a.x, a.y, 2, 2);
 
       for (let j = i + 1; j < nodes.length; j++) {

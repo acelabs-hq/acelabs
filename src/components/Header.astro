@@ -9,7 +9,10 @@ const isActive = (href: string) => current.startsWith(url(href));
 <header class="site-header">
   <div class="wrap">
     <nav class="nav" aria-label="Main">
-      <a class="logo" href={url()}>ACE<span>.</span>LABS</a>
+      <a class="logo" href={url()} aria-label={`${site.name} home`}>
+        <img src={url("logo.svg")} alt="" width="30" height="30" />
+        <span>ACE LABS</span>
+      </a>
       <button
         class="nav-toggle"
         type="button"
