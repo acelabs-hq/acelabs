@@ -24,8 +24,8 @@ export const site = {
   links: {
     github: "https://github.com/acelabs-hq/acelabs",
     instagram: "https://www.instagram.com/ace_labs_in/",
-    /** Add the invite link once the Discord server exists. Empty means it is not shown. */
-    discord: "",
+    /** Discord server invite. */
+    discord: "https://discord.gg/UVH8KK6Zp",
     /** Add the profile link for X once confirmed. Empty means it is not shown. */
     x: "",
     /** Add the LinkedIn page and YouTube channel links once they exist. */

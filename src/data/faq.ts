@@ -53,7 +53,7 @@ export const faqs: Faq[] = [
   {
     question: "Where can I follow along?",
     answer:
-      "On Instagram at @ace_labs_in, and on X and Discord as those go live. Links are in the footer.",
+      "On Instagram at @ace_labs_in and on Discord, with X to follow. Links are in the footer.",
   },
   {
     question: "How do I get in touch?",
