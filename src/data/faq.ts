@@ -43,7 +43,7 @@ export const faqs: Faq[] = [
   {
     question: "Is ACE Labs a practice led by one person?",
     answer:
-      "Yes. ACE Labs is a practice led by Prasad F., with collaborators. Alongside the lab's research and products, he shares his day-to-day routine as content and is starting an indie hacking podcast.",
+      "Yes. ACE Labs is a practice led by Prasad F., with collaborators. Alongside the lab's research and products, he shares his day-to-day routine as content and is starting a podcast with researchers, engineers and builders.",
   },
   {
     question: "Are there products or episodes yet?",

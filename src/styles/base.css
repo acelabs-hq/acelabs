@@ -21,6 +21,8 @@ h1,
 h2,
 h3 {
   font-family: var(--font-ui);
+  font-stretch: 112%;
+  font-weight: 800;
   margin: 0 0 6px;
 }
 

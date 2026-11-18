@@ -58,6 +58,7 @@ export const method = [
 
 /** What the podcast covers. */
 export const podcastTopics = [
+  { title: "Research", text: "Conversations with researchers about what they are studying and what it means for people who build." },
   { title: "Indie hacking", text: "Building and shipping small products on your own terms." },
   { title: "Building with AI", text: "What works, what breaks, and what is just hype." },
   { title: "Sustainable systems", text: "Keeping products and builders going for the long run." },

@@ -2,7 +2,7 @@
  * Design tokens. Every colour, size and font in the site comes from here.
  * To re-theme the site, change these values and nothing else.
  * The palette follows the personal site: charcoal background, red accent,
- * with dark gradient surfaces in the style of 1-to-N and SpaceX.
+ * with flat dark surfaces in the spirit of SpaceX and 1-to-N.
  */
 :root {
   color-scheme: dark;
@@ -13,8 +13,6 @@
   --card: #1c1c1e;
   --line: #2e2e32;
   --accent: #ef4444;
-  --accent-2: #f97316;
-  --accent-3: #8b5cf6;
 
   --dark-bg: #0b0b0c;
   --dark-fg: #f5f5f5;
@@ -22,18 +20,14 @@
   --dark-line: #2e2e32;
   --dark-accent: #ef4444;
 
-  /* Slab surfaces: a dark diagonal gradient with a soft coloured glow. */
-  --slab-bg:
-    radial-gradient(120% 90% at 0% 0%, rgba(239, 68, 68, 0.16), transparent 55%),
-    radial-gradient(100% 80% at 100% 100%, rgba(139, 92, 246, 0.14), transparent 60%),
-    linear-gradient(160deg, #202024 0%, #151517 100%);
-  --slab-border: rgba(255, 255, 255, 0.08);
-  --slab-border-hover: rgba(239, 68, 68, 0.55);
-  --brand-gradient: linear-gradient(135deg, #ef4444 0%, #f97316 55%, #8b5cf6 100%);
+  /* Slabs: flat, dark and quiet. No gradients. */
+  --slab-bg: #1b1b1d;
+  --slab-border: #2e2e32;
+  --slab-border-hover: #ef4444;
 
-  --font-body: Georgia, "Times New Roman", serif;
-  --font-ui: system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-mono: ui-monospace, Menlo, Consolas, monospace;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-ui: "Archivo", "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
 
   --radius: 14px;
   --radius-pill: 999px;

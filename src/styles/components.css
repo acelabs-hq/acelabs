@@ -137,7 +137,7 @@
 /* ---------- Buttons and labels ---------- */
 .btn {
   display: inline-block;
-  background: var(--brand-gradient);
+  background: var(--accent);
   color: #fff;
   padding: 11px 20px;
   border-radius: var(--radius-pill);
@@ -155,8 +155,8 @@
 
 .tag {
   display: block;
-  font: 700 12px var(--font-ui);
-  letter-spacing: 0.12em;
+  font: 500 12px var(--font-mono);
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--accent);
 }
@@ -181,14 +181,13 @@
   border: 1px solid var(--slab-border);
   border-radius: var(--radius);
   padding: 22px;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 12px 30px -18px rgba(0, 0, 0, 0.8);
-  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
 .card:hover {
   border-color: var(--slab-border-hover);
   transform: translateY(-2px);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07) inset, 0 18px 40px -18px rgba(239, 68, 68, 0.35);
 }
 
 .card p,
@@ -226,6 +225,10 @@ a.card:hover {
   position: relative;
   overflow: hidden;
   border-bottom: 1px solid var(--dark-line);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
 }
 
 .hero .lead {
@@ -239,7 +242,7 @@ a.card:hover {
 }
 
 .hero .btn {
-  background: var(--brand-gradient);
+  background: var(--accent);
   border-color: transparent;
   color: #fff;
 }
