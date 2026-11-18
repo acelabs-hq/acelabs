@@ -13,7 +13,7 @@ export const leadership: Person[] = [
   {
     name: "Prasad F.",
     initials: "PF",
-    role: "Founder & Engineer",
+    role: "CEO & Co-Founder",
     bio: "3+ years of experience building software systems, AI-powered solutions, and scalable digital products.",
   },
   {
